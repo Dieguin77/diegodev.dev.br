@@ -1,93 +1,186 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-Br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Diego Batista Gomes Moraes</title>
+    <title>Diego Batista | Desenvolvedor Web de Alta Performance</title>
+    <meta name="description" content="Desenvolvedor Front-end especialista em sites e landing pages de alta performance. Código puro (HTML/CSS/JS) para carregamento instantâneo e melhor SEO.">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!---->
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Diego Batista Gomes Moraes</h1> 
-            <p><B>Desenvolvedor Web | Front-End e Back-End</B></p>
-            <div class="contact-info">
-                <span>Governador Valadares - MG</span> |
-                <span>(27) 99993-3283 / (27) 99708-2426</span> |
-                <span>diegobatistt@gmail.com</span>
-            </div>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/diego-batista-gomes-737491259" target="_blank">LinkedIn</a> |
-                <a href="https://github.com/Dieguin77" target="_blank">GitHub</a>
-            </div>
-        </div>
+
+    <header class="header">
+        <a href="#inicio" class="logo">Diego<span>.Dev</span></a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#inicio" class="active">Início</a>
+            <a href="#beneficios">Por que Código Puro?</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#projetos">Portfólio</a>
+            <a href="#contato">Contato</a>
+        </nav>
     </header>
 
-    <main class="container">
-        <section id="objetivo">
-            <h2>■ Objetivo</h2>
-            <p>Atuar na área de Tecnologia da Informação, com foco em Desenvolvimento Web (Front-End e Back-End) e Suporte Técnico, aplicando conhecimentos em programação, APIs, redes e experiência do usuário.</p>
-        </section>
+    <section class="home" id="inicio">
+        <div class="home-content">
+            <h3>Seu negócio precisa de velocidade?</h3>
+            <h1>Eu crio sites que carregam <span class="highlight-text">instantaneamente</span>.</h1>
+            <p>Chega de perder clientes com sites lentos feitos em construtores pesados. Desenvolvo Landing Pages e Sites Institucionais em <strong>código puro (HTML/CSS/JS)</strong>, focados em performance extrema, SEO técnico e conversão.</p>
+            
+            <div class="typing-container">
+                 Especialista em: <span class="multiple-text"></span>
+            </div>
 
-        <section id="formacao">
-            <h2>■ Formação Acadêmica</h2>
-            <ul>
-                <li>
-                    <strong>Tecnologia em Sistemas para Internet</strong> - Em andamento (Previsão de conclusão: 2026)
-                </li>
-                <li>
-                    <strong>Técnico em Segurança do Trabalho</strong> - (2017-2018)
-                </li>
-                <li>
-                    <strong>Ensino Médio Completo</strong> - (2011-2013)
-                </li>
-                <li>
-                    <strong>Informática Básica/Avançada</strong> - (2013-2014)
-                </li>
-            </ul>
-        </section>
-
-        <section id="habilidades">
-            <h2>■ Habilidades Técnicas</h2>
-            <ul>
-                <li><strong>Linguagens:</strong> HTML, CSS, JavaScript, Python (básico)</li>
-                <li><strong>Desenvolvimento Web:</strong> Front-End, Back-End, APIs REST, node.js, Figma, UX-UI</li>
-                <li><strong>Ferramentas:</strong> VS Code, Git/GitHub, Figma, Microsoft Office</li>
-                <li><strong>Conhecimentos:</strong> Lógica de programação, versionamento de código, sistemas operacionais e redes.</li>
-            </ul>
-        </section>
-
-        <section id="projetos">
-            <h2>■ Projetos Pessoais / Acadêmicos</h2>
-            <ul>
-                <li><strong>Página pessoal (HTML/CSS):</strong> site de apresentação de perfil e formação.</li>
-                <li><strong>To-do List (JavaScript):</strong> aplicação com manipulação dinâmica de tarefas.</li>
-                <li><strong>Projeto de API:</strong> integração de dados entre Front-End e Back-End.</li>
-                <li><strong>Extensão universitária:</strong> desenvolvimento colaborativo com foco em soluções digitais.</li>
-            </ul>
-        </section>
-
-        <section id="experiencia">
-            <h2>■ Experiência Profissional</h2>
-            <ul>
-                <li><strong>Auxiliar de Processos</strong> - RN Campos Tecnologia (Out/2024 - Abr/2025)</li>
-                <li><strong>Balconista</strong> - Farmácia Indiana (Mar/2023-2024)</li>
-                <li><strong>Balconista</strong> - Drogarias Pacheco DPSP (Jul/2020 - Mar/2023)</li>
-                </ul>
-        </section>
-
-        <section id="competencias">
-            <h2>■ Competências Comportamentais</h2>
-            <p>Comunicação clara, proatividade, organização, trabalho em equipe, facilidade de aprendizado e atendimento ao público.</p>
-        </section>
-        
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>CNH: Categoria AB | Disponibilidade para início imediato.</p>
-            <p>&copy; 2025 Diego Batista Gomes Moraes</p>
+            <div class="cta-buttons">
+                <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+                <a href="#projetos" class="btn btn-secondary">Ver Exemplos de Performance</a>
+            </div>
+            
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/diego-batista-gomes-moraes-737491259/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Dieguin77" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://wa.me/5527999933283" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            </div>
         </div>
+
+        <div class="home-img">
+            <img src="imagem/Diego.png" alt="Foto de Diego Batista">
+        </div>
+    </section>
+
+    <section class="beneficios section-padding" id="beneficios">
+        <h2 class="heading">Por que escolher <span>Código Puro?</span></h2>
+        
+        <div class="beneficios-container">
+            <div class="beneficio-box">
+                <i class='bx bx-rocket'></i>
+                <h3>Velocidade Extrema</h3>
+                <p>Sem o "peso" de plataformas como WordPress ou Wix. Seu site carrega em milissegundos, o que retém usuários e melhora conversões.</p>
+            </div>
+            <div class="beneficio-box">
+                <i class='bx bxl-google'></i>
+                <h3>O Google Ama</h3>
+                <p>A velocidade é um fator crucial de ranqueamento. Sites com código limpo e semântico tendem a aparecer melhor nas buscas orgânicas.</p>
+            </div>
+            <div class="beneficio-box">
+                <i class='bx bx-shield-quarter'></i>
+                <h3>Mais Segurança</h3>
+                <p>Sem plugins de terceiros desatualizados que abrem brechas de segurança. Um site estático é muito mais difícil de ser invadido.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="servicos section-padding section-bg" id="servicos">
+        <h2 class="heading">Meus <span>Serviços</span></h2>
+        <div class="servicos-container">
+            <div class="servico-card">
+                <h3>Landing Pages de Alta Conversão</h3>
+                <ul>
+                    <li>Foco total em velocidade (Google PageSpeed 95+)</li>
+                    <li>Integração com Pixel/Tags</li>
+                    <li>Design responsivo (Mobile First)</li>
+                </ul>
+            </div>
+            <div class="servico-card">
+                <h3>Sites Institucionais Leves</h3>
+                <ul>
+                    <li>Para empresas que querem presença digital sólida</li>
+                    <li>Código limpo e fácil de manter</li>
+                    <li>Otimizado para SEO local</li>
+                </ul>
+            </div>
+            <div class="servico-card">
+                <h3>Otimização & Manutenção</h3>
+                <ul>
+                    <li>Análise de performance de sites atuais</li>
+                    <li>Limpeza de código e otimização de imagens</li>
+                    <li>Pacotes mensais de atualização</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills section-padding" id="skills">
+        <h2 class="heading">Stack <span>Tecnológica</span></h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-color-light);">Foco nas ferramentas fundamentais da web para garantir o máximo desempenho.</p>
+        
+        <div class="skills-container">
+            <div class="skill-item"><i class='bx bxl-html5'></i> HTML5 Semântico</div>
+            <div class="skill-item"><i class='bx bxl-css3'></i> CSS3 Moderno (Flex/Grid)</div>
+            <div class="skill-item"><i class='bx bxl-javascript'></i> JavaScript Vanilla</div>
+            <div class="skill-item"><i class='bx bx-tachometer'></i> Performance (Web Vitals)</div>
+            <div class="skill-item"><i class='bx bxs-devices'></i> Design Responsivo</div>
+            <div class="skill-item"><i class='bx bxl-git'></i> Git & Versionamento</div>
+        </div>
+    </section>
+
+    <section class="projetos section-padding section-bg" id="projetos">
+        <h2 class="heading">Portfólio de <span>Performance</span></h2>
+        
+        <div class="projetos-container">
+            
+            <div class="projeto-card">
+                <div class="projeto-img-wrapper">
+                    <div class="performance-badge">
+                        <span>🚀 Fila-FIFO 99/100</span>
+                    </div>
+                </div>
+                <div class="projeto-info">
+                    <h3>Estrutura de Dados FIFO</h3>
+                    <p>Página de alta performance criada com HTML/CSS puro. Carregamento em 1.2s.</p>
+                    <a href="https://github.com/Dieguin77/Simula-o-FIFO-Fila-Cinema" target="_blank" class="btn-small">Ver Projeto <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+             <div class="projeto-card">
+                <div class="projeto-img-wrapper">
+                    
+                    <div class="performance-badge">
+                        <span>🚀 PageSpeed Mobile: 98/100</span>
+                    </div>
+                </div>
+                <div class="projeto-info">
+                    <h3>Projeto Full Stack</h3>
+                    <p>Aplicação desenvolvida com foco em arquitetura escalável e performance.</p>
+                    <a href="https://github.com/Dieguin77/Projeto-everlabs-fullstack" target="_blank" class="btn-small">Ver Projeto <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            </div>
+    </section>
+
+    <section class="contato section-padding" id="contato">
+        <h2 class="heading">Vamos <span>Conversar?</span></h2>
+        <p style="text-align: center; margin-bottom: 2rem;">Tem um projeto em mente ou seu site atual está lento? Entre em contato para uma análise gratuita.</p>
+        
+        <div class="contato-container">
+            <div class="contato-direto">
+                <a href="https://wa.me/5527999933283" class="btn btn-primary contato-btn">
+                    <i class='bx bxl-whatsapp'></i> Chamar no WhatsApp
+                </a>
+                <a href="mailto:diegobatistt@gmail.com" class="btn btn-secondary contato-btn">
+                    <i class='bx bx-envelope'></i> Enviar E-mail
+                </a>
+                <a href="https://www.linkedin.com/in/diego-batista-gomes-moraes-737491259/" class="btn btn-secondary contato-btn">
+                    <i class='bx bxl-linkedin'></i> Conectar no LinkedIn
+                </a>
+            </div>
+
+            </div>
+    </section>
+
+    <footer class="footer">
+        <b><p>&copy; 2025 Diego Batista | Desenvolvido com código puro.</p></b>
+        <a href="#inicio" class="footer-iconTop"><i class='bx bx-up-arrow-alt'></i></a>
     </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
