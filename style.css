@@ -1,77 +1,559 @@
-/* style.css */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+/* --- Definição de Variáveis e Reset --- */
+:root {
+    /* Paleta de Cores Profissional (Dark Mode Moderno) */
+    --bg-color: #0f1115; /* Fundo principal bem escuro */
+    --second-bg-color: #161b22; /* Fundo secundário para seções */
+    --text-color: #ededed; /* Texto principal claro */
+    --text-color-light: #a0aaec; /* Texto secundário/descrições */
+    
+    /* COR DE DESTAQUE: Mudei do verde neon para um Azul Elétrico Profissional */
+    /* Se preferir outra cor, mude apenas este código hexa */
+    --main-color: #3b82f6; 
+    
+    --heading-font: 'Montserrat', sans-serif; /* Use Google Fonts se quiser importar */
+    --body-font: 'Open Sans', sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 20px;
-}
-
-header {
-    background: #004a91; /* Um azul escuro profissional */
-    color: #ffffff;
-    padding-top: 30px;
-    min-height: 120px;
-    border-bottom: #0779e4 3px solid;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-header .contact-info, header .social-links {
-    margin: 10px 0;
-}
-
-header a {
-    color: #ffffff;
+    box-sizing: border-box;
     text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px para facilitar cálculos */
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--body-font), sans-serif;
+    line-height: 1.6;
+}
+
+/* Classes Utilitárias */
+.section-padding {
+    padding: 8rem 9%; /* Espaçamento padrão das seções */
+}
+
+.section-bg {
+    background-color: var(--second-bg-color);
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--heading-font);
+    margin-bottom: 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.highlight-text {
+    color: var(--main-color);
     font-weight: bold;
 }
 
-header a:hover {
-    color: #f0f0f0;
+/* --- Header e Navegação --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: rgba(15, 17, 21, 0.9); /* Fundo translúcido */
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-main section {
-    background: #ffffff;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    font-family: var(--heading-font);
 }
 
-main section h2 {
-    color: #004a91;
-    border-bottom: 2px solid #f4f4f4;
-    padding-bottom: 10px;
+.logo span {
+    color: var(--main-color);
 }
 
-main section ul {
-    list-style: none;
-    padding: 0;
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 3.5rem;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
 }
 
-main section ul li {
-    background: #f9f9f9;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-left: 5px solid #0779e4;
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
 }
 
-footer {
-    background: #333;
-    color: #ffffff;
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none; /* Escondido no desktop */
+    cursor: pointer;
+}
+
+/* --- Seção Hero (Início) --- */
+.home {
+    min-height: 100vh;
+    padding: 12rem 9% 5rem; /* Padding superior maior por causa do header fixo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.home-content {
+    flex: 1;
+}
+
+.home-content h3 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--text-color-light);
+}
+
+.home-content h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 1.5rem 0;
+    font-family: var(--heading-font);
+}
+
+.home-content p {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-color-light);
+    max-width: 600px;
+}
+
+/* Efeito de digitação container */
+.typing-container {
+    font-size: 2rem;
+    color: var(--text-color-light);
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+.typing-container span {
+    color: var(--main-color);
+}
+
+
+/* Botões */
+.cta-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: 2px solid var(--main-color);
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--main-color);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+.btn-secondary:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+.social-media {
+    margin-top: 3rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-right: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    transform: translateY(-3px);
+}
+
+.home-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.home-img img {
+    width: 80%;
+    max-width: 450px;
+    border-radius: 2rem;
+    /* Sombra suave em vez de borda neon */
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); 
+    border: 3px solid rgba(59, 130, 246, 0.1);
+}
+
+/* --- Seção Benefícios (Grid de 3 colunas) --- */
+.beneficios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.beneficio-box {
+    background: var(--second-bg-color);
+    padding: 4rem 3rem;
+    border-radius: 2rem;
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s ease;
+}
+
+.beneficio-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--main-color);
+}
+
+.beneficio-box i {
+    font-size: 5rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.beneficio-box h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.beneficio-box p {
+    font-size: 1.6rem;
+    color: var(--text-color-light);
+}
+
+/* --- Seção Serviços --- */
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.servico-card {
+    background: var(--bg-color); /* Contraste com o fundo da seção */
+    padding: 4rem;
+    border-radius: 2rem;
+    border-top: 4px solid var(--main-color); /* Detalhe no topo */
+}
+
+.servico-card h3 {
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+}
+
+.servico-card ul {
+    list-style: none;
+}
+
+.servico-card ul li {
+    font-size: 1.6rem;
+    color: var(--text-color-light);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Ícone de "check" antes de cada item da lista */
+.servico-card ul li::before {
+    content: '\bx2713'; /* Unicode para checkmark */
+    font-family: boxicons;
+    color: var(--main-color);
+    margin-right: 1rem;
+    font-size: 1.8rem;
+}
+
+/* --- Seção Skills --- */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skill-item {
+    font-size: 1.8rem;
+    background: var(--second-bg-color);
+    padding: 1.5rem 2.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.skill-item i {
+    color: var(--main-color);
+    font-size: 2.4rem;
+}
+
+/* --- Seção Projetos (O Portfólio) --- */
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 4rem;
+}
+
+.projeto-card {
+    background: var(--bg-color);
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s ease;
+}
+
+.projeto-card:hover {
+    border-color: var(--main-color);
+    transform: translateY(-5px);
+}
+
+.projeto-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 250px; /* Altura fixa para as imagens */
+}
+
+.projeto-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    transition: 0.3s ease;
+}
+
+.projeto-card:hover .projeto-main-img {
+    transform: scale(1.05); /* Zoom suave ao passar o mouse */
+}
+
+/* O selo de performance sobre a imagem */
+.performance-badge {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00fa9a; /* Verde "SpringGreen" para destacar a nota boa */
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border: 1px solid #00fa9a;
+}
+
+.projeto-info {
+    padding: 2.5rem;
+}
+
+.projeto-info h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.projeto-info p {
+    font-size: 1.6rem;
+    color: var(--text-color-light);
+    margin-bottom: 2rem;
+}
+
+.btn-small {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-small:hover {
+    color: var(--text-color);
+}
+
+
+/* --- Seção Contato --- */
+.contato-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato-direto {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contato-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* --- Footer --- */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer p {
+    font-size: 1.6rem;
+    color: var(--text-color-light);
+}
+
+.footer-iconTop {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: var(--main-color);
+    border-radius: 0.8rem;
+    transition: 0.3s ease;
+}
+
+.footer-iconTop:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop i {
+    font-size: 2.4rem;
+    color: var(--bg-color);
+}
+
+
+/* --- Responsividade (Media Queries) --- */
+
+/* Tablets e telas menores */
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 5%;
+    }
+    .section-padding {
+        padding: 8rem 5%;
+    }
+    .home {
+        padding: 12rem 5% 5rem;
+        flex-direction: column-reverse; /* Foto vai para cima no mobile */
+        text-align: center;
+        gap: 3rem;
+    }
+    .home-content h1 {
+        font-size: 4rem;
+    }
+    .home-content p {
+        max-width: 100%;
+    }
+    .cta-buttons {
+        justify-content: center;
+    }
+    .home-img img {
+        width: 70%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block; /* Mostra o ícone de menu hambúrguer */
+    }
+
+    /* Menu Mobile */
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 5%;
+        background: var(--second-bg-color);
+        border-top: 1px solid rgba(255,255,255,0.05);
+        display: none; /* Escondido por padrão */
+        flex-direction: column;
+    }
+    
+    /* Classe adicionada via JS para mostrar o menu */
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 2rem 0;
+        margin-left: 0; /* Remove a margem lateral do desktop */
+    }
+
+    .cta-buttons {
+        flex-direction: column; /* Botões um embaixo do outro no mobile */
+        gap: 1rem;
+    }
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .heading {
+        font-size: 3rem;
+    }
+    .home-content h1 {
+        font-size: 3.2rem;
+    }
+    .home-img img {
+        width: 90%;
+    }
 }
