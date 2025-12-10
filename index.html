@@ -1,186 +1,237 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego Batista | Desenvolvedor Web de Alta Performance</title>
-    <meta name="description" content="Desenvolvedor Front-end especialista em sites e landing pages de alta performance. Código puro (HTML/CSS/JS) para carregamento instantâneo e melhor SEO.">
+    <title>DiegoDev | Full Stack Developer</title>
     
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!---->
+    <link rel="icon" type="image/png" href="imagem/favicon-diego.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <a href="#inicio" class="logo">Diego<span>.Dev</span></a>
+    <div class="grid-background"></div>
+    <div class="overlay-image"></div>
 
-        <i class='bx bx-menu' id="menu-icon"></i>
-
-        <nav class="navbar">
-            <a href="#inicio" class="active">Início</a>
-            <a href="#beneficios">Por que Código Puro?</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#projetos">Portfólio</a>
-            <a href="#contato">Contato</a>
+    <header>
+        <div class="logo">DIEGO BATISTA <span class="highlight">DEV</span>_</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="https://wa.me/5527999933283" target="_blank" class="btn-small">Contato</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section class="home" id="inicio">
-        <div class="home-content">
-            <h3>Seu negócio precisa de velocidade?</h3>
-            <h1>Eu crio sites que carregam <span class="highlight-text">instantaneamente</span>.</h1>
-            <p>Chega de perder clientes com sites lentos feitos em construtores pesados. Desenvolvo Landing Pages e Sites Institucionais em <strong>código puro (HTML/CSS/JS)</strong>, focados em performance extrema, SEO técnico e conversão.</p>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="tagline">&lt; System.Online /&gt;</p>
+            <h1>Olá, sou <span class="highlight">Diego</span></h1>
             
-            <div class="typing-container">
-                 Especialista em: <span class="multiple-text"></span>
-            </div>
+            <h2 class="typing-effect">
+                Eu sou <span class="txt-type" data-wait="2000" data-words='["Desenvolvedor", "SDR", "Programador", "Full Stack"]'></span>
+            </h2>
 
-            <div class="cta-buttons">
-                <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
-                <a href="#projetos" class="btn btn-secondary">Ver Exemplos de Performance</a>
-            </div>
+            <p class="description">
+    Não faço apenas sites, construo <strong>Máquinas de Vendas</strong>. 
+    Unindo Tecnologia e Estratégias de SDR para transformar visitantes em clientes para o seu negócio.
+</p>
             
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/diego-batista-gomes-moraes-737491259/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Dieguin77" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://wa.me/5527999933283" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            <div class="cta-group">
+                <a href="#projects" class="btn-neon">Ver Projetos <i class="fas fa-code"></i></a>
+                <a href="https://wa.me/5527999933283" target="_blank" class="btn-outline">WhatsApp</a>
             </div>
         </div>
 
-        <div class="home-img">
-            <img src="imagem/Diego.png" alt="Foto de Diego Batista">
-        </div>
-    </section>
-
-    <section class="beneficios section-padding" id="beneficios">
-        <h2 class="heading">Por que escolher <span>Código Puro?</span></h2>
-        
-        <div class="beneficios-container">
-            <div class="beneficio-box">
-                <i class='bx bx-rocket'></i>
-                <h3>Velocidade Extrema</h3>
-                <p>Sem o "peso" de plataformas como WordPress ou Wix. Seu site carrega em milissegundos, o que retém usuários e melhora conversões.</p>
-            </div>
-            <div class="beneficio-box">
-                <i class='bx bxl-google'></i>
-                <h3>O Google Ama</h3>
-                <p>A velocidade é um fator crucial de ranqueamento. Sites com código limpo e semântico tendem a aparecer melhor nas buscas orgânicas.</p>
-            </div>
-            <div class="beneficio-box">
-                <i class='bx bx-shield-quarter'></i>
-                <h3>Mais Segurança</h3>
-                <p>Sem plugins de terceiros desatualizados que abrem brechas de segurança. Um site estático é muito mais difícil de ser invadido.</p>
-            </div>
+        <div class="hero-image-container">
+            <img src="imagem/Diego.png" alt="Diego Developer" class="profile-img">
         </div>
     </section>
 
-    <section class="servicos section-padding section-bg" id="servicos">
-        <h2 class="heading">Meus <span>Serviços</span></h2>
-        <div class="servicos-container">
-            <div class="servico-card">
-                <h3>Landing Pages de Alta Conversão</h3>
-                <ul>
-                    <li>Foco total em velocidade (Google PageSpeed 95+)</li>
-                    <li>Integração com Pixel/Tags</li>
-                    <li>Design responsivo (Mobile First)</li>
-                </ul>
-            </div>
-            <div class="servico-card">
-                <h3>Sites Institucionais Leves</h3>
-                <ul>
-                    <li>Para empresas que querem presença digital sólida</li>
-                    <li>Código limpo e fácil de manter</li>
-                    <li>Otimizado para SEO local</li>
-                </ul>
-            </div>
-            <div class="servico-card">
-                <h3>Otimização & Manutenção</h3>
-                <ul>
-                    <li>Análise de performance de sites atuais</li>
-                    <li>Limpeza de código e otimização de imagens</li>
-                    <li>Pacotes mensais de atualização</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="skills section-padding" id="skills">
-        <h2 class="heading">Stack <span>Tecnológica</span></h2>
-        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-color-light);">Foco nas ferramentas fundamentais da web para garantir o máximo desempenho.</p>
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">Minhas <span class="highlight">Habilidades</span></h2>
         
         <div class="skills-container">
-            <div class="skill-item"><i class='bx bxl-html5'></i> HTML5 Semântico</div>
-            <div class="skill-item"><i class='bx bxl-css3'></i> CSS3 Moderno (Flex/Grid)</div>
-            <div class="skill-item"><i class='bx bxl-javascript'></i> JavaScript Vanilla</div>
-            <div class="skill-item"><i class='bx bx-tachometer'></i> Performance (Web Vitals)</div>
-            <div class="skill-item"><i class='bx bxs-devices'></i> Design Responsivo</div>
-            <div class="skill-item"><i class='bx bxl-git'></i> Git & Versionamento</div>
+            
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Tech Stack</h3>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <span>MariaDB</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-docker"></i>
+                        <span>Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-briefcase"></i> Professional</h3>
+                <div class="skill-grid">
+                    <div class="skill-item highlight-border">
+                        <i class="fas fa-headset"></i>
+                        <span>SDR / Vendas</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-github"></i>
+                        <span>Git / GitHub</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-comments"></i>
+                        <span>Comunicação</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-terminal"></i>
+                        <span>VS Code</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <section class="projetos section-padding section-bg" id="projetos">
-        <h2 class="heading">Portfólio de <span>Performance</span></h2>
+    <section id="services" class="services-section">
+        <h2 class="section-title">Soluções de <span class="highlight">Impacto</span></h2>
         
-        <div class="projetos-container">
+        <div class="pricing-grid">
             
-            <div class="projeto-card">
-                <div class="projeto-img-wrapper">
-                    <div class="performance-badge">
-                        <span>🚀 Fila-FIFO 99/100</span>
-                    </div>
-                </div>
-                <div class="projeto-info">
-                    <h3>Estrutura de Dados FIFO</h3>
-                    <p>Página de alta performance criada com HTML/CSS puro. Carregamento em 1.2s.</p>
-                    <a href="https://github.com/Dieguin77/Simula-o-FIFO-Fila-Cinema" target="_blank" class="btn-small">Ver Projeto <i class='bx bx-link-external'></i></a>
-                </div>
+            <div class="pricing-card">
+                <h3>Landing Page</h3>
+                <div class="price">A parir de R$700,00 <span class="value">High</span></div>
+                <p class="scarcity">Ideal para capturar leads e vendas rápidas.</p>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Design High Tech/Moderno</li>
+                    <li><i class="fas fa-check"></i> Foco em Conversão (SDR)</li>
+                    <li><i class="fas fa-check"></i> Botão WhatsApp Integrado</li>
+                    <li><i class="fas fa-check"></i> Hospedagem Gratuita</li>
+                </ul>
+                <a href="https://wa.me/5527999933283?text=Quero+uma+Landing+Page" target="_blank" class="btn-outline">Quero Este</a>
             </div>
 
-             <div class="projeto-card">
-                <div class="projeto-img-wrapper">
-                    
-                    <div class="performance-badge">
-                        <span>🚀 PageSpeed Mobile: 98/100</span>
-                    </div>
-                </div>
-                <div class="projeto-info">
-                    <h3>Projeto Full Stack</h3>
-                    <p>Aplicação desenvolvida com foco em arquitetura escalável e performance.</p>
-                    <a href="https://github.com/Dieguin77/Projeto-everlabs-fullstack" target="_blank" class="btn-small">Ver Projeto <i class='bx bx-link-external'></i></a>
-                </div>
+            <div class="pricing-card featured">
+                <div class="badge">MAIS VENDIDO</div>
+                <h3>Site Institucional</h3>
+                <div class="price">A partir de 800R$ <span class="value">Pro</span></div>
+                <p class="scarcity">Para empresas que querem autoridade total.</p>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Até 5 Páginas</li>
+                    <li><i class="fas fa-check"></i> Otimizado para Google (SEO)</li>
+                    <li><i class="fas fa-check"></i> Painel Administrativo</li>
+                    <li><i class="fas fa-check"></i> 1 Ano de Suporte</li>
+                    <li><i class="fas fa-check"></i> <strong>Copywriting de Vendas</strong></li>
+                </ul>
+                <a href="https://wa.me/5527999933283?text=Quero+um+Site+Institucional" target="_blank" class="btn-neon">Contratar Agora</a>
             </div>
 
+            <div class="pricing-card">
+                <h3>Sistema Web</h3>
+                <div class="price"><span class="value">Sob Medida</span></div>
+                <p class="scarcity">Sistemas complexos e automações.</p>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Painel de Controle (Dashboard)</li>
+                    <li><i class="fas fa-check"></i> Banco de Dados (MariaDB)</li>
+                    <li><i class="fas fa-check"></i> API & Integrações</li>
+                    <li><i class="fas fa-check"></i> Login de Usuários</li>
+                </ul>
+                <a href="https://wa.me/5527999933283?text=Quero+um+Sistema+Personalizado" target="_blank" class="btn-outline">Consultar</a>
             </div>
+
+        </div>
     </section>
 
-    <section class="contato section-padding" id="contato">
-        <h2 class="heading">Vamos <span>Conversar?</span></h2>
-        <p style="text-align: center; margin-bottom: 2rem;">Tem um projeto em mente ou seu site atual está lento? Entre em contato para uma análise gratuita.</p>
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Meus ultimos <span class="highlight">Projetos</span></h2>
         
-        <div class="contato-container">
-            <div class="contato-direto">
-                <a href="https://wa.me/5527999933283" class="btn btn-primary contato-btn">
-                    <i class='bx bxl-whatsapp'></i> Chamar no WhatsApp
-                </a>
-                <a href="mailto:diegobatistt@gmail.com" class="btn btn-secondary contato-btn">
-                    <i class='bx bx-envelope'></i> Enviar E-mail
-                </a>
-                <a href="https://www.linkedin.com/in/diego-batista-gomes-moraes-737491259/" class="btn btn-secondary contato-btn">
-                    <i class='bx bxl-linkedin'></i> Conectar no LinkedIn
-                </a>
+        <div class="projects-grid">
+            
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="imagem/print-dr-pedro.jpg" alt="Site Dr. Pedro">
+                </div>
+                <div class="card-body">
+                    <h3>Dr. Pedro Souza</h3>
+                    <p>Landing page para área da saúde com foco em conversão e agendamentos.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                </div>
             </div>
 
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="imagem/print-pr-gladston.jpg" alt="Site Pr. Gladston">
+                </div>
+                <div class="card-body">
+                    <h3>Pr. Gladston Freire</h3>
+                    <p>Website institucional para autor e palestrante, com blog e agenda.</p>
+                    <div class="tech-tags">
+                        <span>Front-end</span><span>Design</span>
+                    </div>
+                </div>
             </div>
+
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="imagem/print-tocando-pra-valer.jpg" alt="Tocando Pra Valer">
+                </div>
+                <div class="card-body">
+                    <h3>Tocando Pra Valer</h3>
+                    <p>Plataforma de cifras e música. Interface limpa para músicos.</p>
+                    <div class="tech-tags">
+                        <span>Web App</span><span>UI/UX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="imagem/print-em-eliel.jpg" alt="Advogado Eliel">
+                </div>
+                <div class="card-body">
+                    <h3>Acabamento de Alto Padrão</h3>
+                    <p>Landing page de ranking, SEO, rápido e cod puro. </p>
+                    <div class="tech-tags">
+                        <span>Landing Page</span><span>SEO</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
-    <footer class="footer">
-        <b><p>&copy; 2025 Diego Batista | Desenvolvido com código puro.</p></b>
-        <a href="#inicio" class="footer-iconTop"><i class='bx bx-up-arrow-alt'></i></a>
+    <footer>
+        <p>Desenvolvido por <strong>Diego Batista G. Moraes - </strong>YHWH © 2025.</p>
     </footer>
 
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    
     <script src="script.js"></script>
+    <a href="https://wa.me/5527999933283?text=Olá+Diego,+vi+seu+site+e+quero+um+orçamento." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>

@@ -1,52 +1,46 @@
-/* ================= toggle icon navbar (Menu Mobile) ================= */
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+class TypeWriter {
+    constructor(txtElement, words, wait = 3000) {
+        this.txtElement = txtElement;
+        this.words = words;
+        this.txt = '';
+        this.wordIndex = 0;
+        this.wait = parseInt(wait, 10);
+        this.type();
+        this.isDeleting = false;
+    }
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x'); // Transforma o ícone de menu em X
-    navbar.classList.toggle('active'); // Mostra/esconde o menu
-};
+    type() {
+        const current = this.wordIndex % this.words.length;
+        const fullTxt = this.words[current];
 
-/* ================= scroll sections active link ================= */
-// Isso faz o link do menu ficar colorido conforme você rola a página
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+        if(this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
 
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+        this.txtElement.innerHTML = `<span class="txt" style="border-right: 2px solid #00f3ff; padding-right: 5px;">${this.txt}</span>`;
 
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-        };
-    });
+        let typeSpeed = 100;
+        if(this.isDeleting) typeSpeed /= 2;
 
-    /* ================= sticky navbar ================= */
-    // Adiciona uma sombra suave ao menu quando rola para baixo
-    let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 100);
+        if(!this.isDeleting && this.txt === fullTxt) {
+            typeSpeed = this.wait;
+            this.isDeleting = true;
+        } else if(this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.wordIndex++;
+            typeSpeed = 500;
+        }
 
-    /* ================= remove toggle icon and navbar when click navbar link (scroll) ================= */
-    // Fecha o menu mobile automaticamente quando clica em um link
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
-};
+        setTimeout(() => this.type(), typeSpeed);
+    }
+}
 
-
-/* ================= typed js (Efeito de digitação) ================= */
-// Se não quiser o efeito, pode apagar esta parte e remover o script do HTML
-if (document.querySelector('.multiple-text')) {
-    const typed = new Typed('.multiple-text', {
-        strings: ['Alta Performance', 'Landing Pages Rápidas', 'Código Puro (HTML/CSS)'],
-        typeSpeed: 100,
-        backSpeed: 100,
-        backDelay: 1000,
-        loop: true
-    });
+document.addEventListener('DOMContentLoaded', init);
+function init() {
+    const txtElement = document.querySelector('.txt-type');
+    const words = JSON.parse(txtElement.getAttribute('data-words'));
+    const wait = txtElement.getAttribute('data-wait');
+    new TypeWriter(txtElement, words, wait);
 }
