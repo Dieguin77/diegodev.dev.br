@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DiegoDev | Full Stack Developer</title>
+    <title>DiegoDev | Desenvolvedor Full Stack - Sites que Vendem</title>
+    <meta name="description" content="Desenvolvedor Full Stack especializado em criar sites de alta conversão. Transformo visitantes em clientes com Landing Pages e Sistemas Web.">
+    <meta name="keywords" content="desenvolvedor web, full stack, landing page, sites que vendem, SDR, conversão">
     
     <link rel="icon" type="image/png" href="imagem/favicon-diego.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DiegoDev | Desenvolvedor Full Stack">
+    <meta property="og:description" content="Sites que transformam visitantes em clientes. Tecnologia + Estratégia de Vendas.">
+    <meta property="og:image" content="imagem/Diego.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,20 +27,47 @@
     <div class="grid-background"></div>
     <div class="overlay-image"></div>
 
+    <!-- Loader Animado -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <span class="loader-text">DIEGO<span class="highlight">DEV</span></span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
     <header>
         <div class="logo">DIEGO BATISTA <span class="highlight">DEV</span>_</div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Serviços</a></li>
                 <li><a href="#projects">Projetos</a></li>
+                <li><a href="#testimonials">Clientes</a></li>
                 <li><a href="https://wa.me/5527999933283" target="_blank" class="btn-small">Contato</a></li>
             </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
+    <!-- Menu Mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#testimonials">Clientes</a></li>
+            <li><a href="https://wa.me/5527999933283" target="_blank" class="btn-neon">Falar no WhatsApp</a></li>
+        </ul>
+    </div>
+
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-content fade-in">
             <p class="tagline">&lt; System.Online /&gt;</p>
             <h1>Olá, sou <span class="highlight">Diego</span></h1>
             
@@ -41,18 +76,53 @@
             </h2>
 
             <p class="description">
-    Não faço apenas sites, construo <strong>Máquinas de Vendas</strong>. 
-    Unindo Tecnologia e Estratégias de SDR para transformar visitantes em clientes para o seu negócio.
-</p>
+                Não faço apenas sites, construo <strong>Máquinas de Vendas</strong>. 
+                Unindo Tecnologia e Estratégias de SDR para transformar visitantes em clientes para o seu negócio.
+            </p>
+
+            <!-- Badge de Disponibilidade -->
+            <div class="availability-badge">
+                <span class="pulse-dot"></span>
+                <span>Disponível para novos projetos</span>
+            </div>
             
             <div class="cta-group">
-                <a href="#projects" class="btn-neon">Ver Projetos <i class="fas fa-code"></i></a>
-                <a href="https://wa.me/5527999933283" target="_blank" class="btn-outline">WhatsApp</a>
+                <a href="https://wa.me/5527999933283?text=Olá+Diego,+quero+um+orçamento+para+meu+projeto!" target="_blank" class="btn-neon">
+                    <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                </a>
+                <a href="#projects" class="btn-outline">Ver Projetos</a>
             </div>
         </div>
 
-        <div class="hero-image-container">
+        <div class="hero-image-container fade-in-right">
+            <div class="image-glow"></div>
             <img src="imagem/Diego.png" alt="Diego Developer" class="profile-img">
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE NÚMEROS / AUTORIDADE -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item fade-in">
+                <i class="fas fa-rocket"></i>
+                <span class="stat-number" data-target="15">0</span>
+                <span class="stat-label">Projetos Entregues</span>
+            </div>
+            <div class="stat-item fade-in">
+                <i class="fas fa-users"></i>
+                <span class="stat-number" data-target="12">0</span>
+                <span class="stat-label">Clientes Satisfeitos</span>
+            </div>
+            <div class="stat-item fade-in">
+                <i class="fas fa-code"></i>
+                <span class="stat-number" data-target="5000">0</span>
+                <span class="stat-label">Linhas de Código</span>
+            </div>
+            <div class="stat-item fade-in">
+                <i class="fas fa-clock"></i>
+                <span class="stat-number" data-target="3">0</span>
+                <span class="stat-label">Anos de Experiência</span>
+            </div>
         </div>
     </section>
 
@@ -165,6 +235,82 @@
         </div>
     </section>
 
+    <!-- SEÇÃO DE DEPOIMENTOS -->
+    <section id="testimonials" class="testimonials-section">
+        <h2 class="section-title">O que dizem os <span class="highlight">Clientes</span></h2>
+        
+        <div class="testimonials-container">
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-header">
+                    <div class="client-avatar">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="client-info">
+                        <h4>Dr. Pedro Souza</h4>
+                        <span>Médico</span>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    "Diego entregou um site que superou minhas expectativas. O design moderno e a facilidade 
+                    de agendamento aumentaram meus pacientes em 40%!"
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-header">
+                    <div class="client-avatar">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <div class="client-info">
+                        <h4>Pr. Gladston Freire</h4>
+                        <span>Autor e Palestrante</span>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    "Profissional excelente! Entendeu exatamente o que eu precisava e entregou um site 
+                    que transmite credibilidade e profissionalismo."
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-header">
+                    <div class="client-avatar">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="client-info">
+                        <h4>Tocando Pra Valer</h4>
+                        <span>Plataforma Musical</span>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    "A plataforma ficou incrível! Interface limpa, rápida e os músicos adoraram. 
+                    Recomendo o trabalho do Diego!"
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects" class="projects-section">
         <h2 class="section-title">Meus ultimos <span class="highlight">Projetos</span></h2>
         
@@ -225,13 +371,36 @@
         </div>
     </section>
 
+    <!-- CTA FINAL -->
+    <section class="cta-section">
+        <div class="cta-content fade-in">
+            <h2>Pronto para <span class="highlight">Transformar</span> seu Negócio?</h2>
+            <p>Vamos criar juntos um site que gera resultados reais para você.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/5527999933283?text=Olá+Diego!+Quero+fazer+um+orçamento+para+meu+projeto." target="_blank" class="btn-neon btn-large">
+                    <i class="fab fa-whatsapp"></i> Falar Agora no WhatsApp
+                </a>
+            </div>
+            <p class="cta-note"><i class="fas fa-bolt"></i> Resposta em até 2 horas</p>
+        </div>
+    </section>
+
     <footer>
-        <p>Desenvolvido por <strong>Diego Batista G. Moraes - </strong>YHWH © 2025.</p>
+        <div class="footer-content">
+            <div class="footer-logo">DIEGO<span class="highlight">DEV</span>_</div>
+            <div class="footer-links">
+                <a href="https://github.com/diegodev" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/diegodev" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/5527999933283" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>Desenvolvido por <strong>Diego Batista G. Moraes</strong> - YHWH © 2025</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
     <a href="https://wa.me/5527999933283?text=Olá+Diego,+vi+seu+site+e+quero+um+orçamento." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Fale comigo!</span>
     </a>
 </body>
 </html>
