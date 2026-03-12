@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DiegoDev | Desenvolvedor Full Stack - Sites que Vendem</title>
-    <meta name="description" content="Desenvolvedor Full Stack especializado em criar sites de alta conversão. Transformo visitantes em clientes com Landing Pages e Sistemas Web.">
-    <meta name="keywords" content="desenvolvedor web, full stack, landing page, sites que vendem, SDR, conversão">
+    <title>DiegoDev | Criação de Sites Profissionais</title>
+    <meta name="description" content="Criação de sites profissionais, landing pages de alta conversão e e-commerce. Transformo sua ideia em realidade digital.">
+    <meta name="keywords" content="criação de sites, landing page, e-commerce, desenvolvimento web, sites profissionais">
     
     <link rel="icon" type="image/png" href="imagem/favicon-diego.png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="DiegoDev | Desenvolvedor Full Stack">
-    <meta property="og:description" content="Sites que transformam visitantes em clientes. Tecnologia + Estratégia de Vendas.">
+    <meta property="og:title" content="DiegoDev | Criação de Sites Profissionais">
+    <meta property="og:description" content="Sites que vendem. Landing pages de alta conversão.">
     <meta property="og:image" content="imagem/Diego.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,16 +36,23 @@
     </div>
 
     <header>
-        <div class="logo">DIEGO BATISTA <span class="highlight">DEV</span>_</div>
+        <div class="logo">DIEGO<span class="highlight">DEV</span>_</div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#testimonials">Clientes</a></li>
-                <li><a href="https://wa.me/5527999933283" target="_blank" class="btn-small">Contato</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar serviços...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
@@ -57,27 +64,47 @@
     <!-- Menu Mobile -->
     <div class="mobile-menu" id="mobileMenu">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#testimonials">Clientes</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
             <li><a href="https://wa.me/5527999933283" target="_blank" class="btn-neon">Falar no WhatsApp</a></li>
         </ul>
     </div>
 
+    <!-- Carrinho Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-cart"></i> Meu Orçamento</h3>
+                <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Itens do carrinho serão inseridos via JS -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-value" id="cartTotal">R$ 0,00</span>
+                </div>
+                <button class="btn-neon checkout-btn" id="checkoutBtn">
+                    <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                </button>
+            </div>
+        </div>
+    </div>
+
     <section id="home" class="hero">
         <div class="hero-content fade-in">
-            <p class="tagline">&lt; System.Online /&gt;</p>
-            <h1>Olá, sou <span class="highlight">Diego</span></h1>
+            <p class="tagline">&lt; Diego.Dev /&gt;</p>
+            <h1>Criação de <span class="highlight">Sites</span></h1>
             
             <h2 class="typing-effect">
-                Eu sou <span class="txt-type" data-wait="2000" data-words='["Desenvolvedor", "SDR", "Programador", "Full Stack"]'></span>
+                Eu crio <span class="txt-type" data-wait="2000" data-words='["Landing Pages", "Sites Institucionais", "E-commerces", "Sistemas Web"]'></span>
             </h2>
 
             <p class="description">
-                Não faço apenas sites, construo <strong>Máquinas de Vendas</strong>. 
-                Unindo Tecnologia e Estratégias de SDR para transformar visitantes em clientes para o seu negócio.
+                Sites profissionais que geram resultados. Landing pages de alta conversão, 
+                e-commerces completos e sistemas personalizados para seu negócio.
             </p>
 
             <!-- Badge de Disponibilidade -->
@@ -87,16 +114,16 @@
             </div>
             
             <div class="cta-group">
-                <a href="https://wa.me/5527999933283?text=Olá+Diego,+quero+um+orçamento+para+meu+projeto!" target="_blank" class="btn-neon">
-                    <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                <a href="#products" class="btn-neon">
+                    <i class="fas fa-rocket"></i> Ver Serviços
                 </a>
-                <a href="#projects" class="btn-outline">Ver Projetos</a>
+                <a href="#offers" class="btn-outline">Promoções</a>
             </div>
         </div>
 
         <div class="hero-image-container fade-in-right">
             <div class="image-glow"></div>
-            <img src="imagem/Diego.png" alt="Diego Developer" class="profile-img">
+            <img src="imagem/Diego.png" alt="Diego Developer" class="profile-img hero-product-img">
         </div>
     </section>
 
@@ -104,156 +131,338 @@
     <section class="stats-section">
         <div class="stats-container">
             <div class="stat-item fade-in">
-                <i class="fas fa-rocket"></i>
-                <span class="stat-number" data-target="15">0</span>
+                <i class="fas fa-laptop-code"></i>
+                <span class="stat-number" data-target="50">0</span>
                 <span class="stat-label">Projetos Entregues</span>
             </div>
             <div class="stat-item fade-in">
                 <i class="fas fa-users"></i>
-                <span class="stat-number" data-target="12">0</span>
+                <span class="stat-number" data-target="45">0</span>
                 <span class="stat-label">Clientes Satisfeitos</span>
             </div>
             <div class="stat-item fade-in">
                 <i class="fas fa-code"></i>
-                <span class="stat-number" data-target="5000">0</span>
+                <span class="stat-number" data-target="10000">0</span>
                 <span class="stat-label">Linhas de Código</span>
             </div>
             <div class="stat-item fade-in">
-                <i class="fas fa-clock"></i>
+                <i class="fas fa-star"></i>
                 <span class="stat-number" data-target="3">0</span>
                 <span class="stat-label">Anos de Experiência</span>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills-section">
-        <h2 class="section-title">Minhas <span class="highlight">Habilidades</span></h2>
+    <!-- CATEGORIAS / SERVIÇOS -->
+    <section id="categories" class="categories-section">
+        <h2 class="section-title">Nossos <span class="highlight">Serviços</span></h2>
         
-        <div class="skills-container">
-            
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Tech Stack</h3>
-                <div class="skill-grid">
-                    <div class="skill-item">
-                        <i class="fab fa-js-square"></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-node-js"></i>
-                        <span>Node.js</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-html5"></i>
-                        <span>HTML5</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-css3-alt"></i>
-                        <span>CSS3</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-database"></i>
-                        <span>MariaDB</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-docker"></i>
-                        <span>Docker</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-js-square"></i>
-                        <span>TypeScript</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-python"></i>
-                        <span>Python</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-leaf"></i>
-                        <span>MongoDB</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-database"></i>
-                        <span>SQL</span>
-                    </div>
+        <div class="categories-grid">
+            <div class="category-card" data-category="landing">
+                <div class="category-icon">
+                    <i class="fas fa-rocket"></i>
                 </div>
+                <h3>Landing Pages</h3>
+                <p>Alta conversão</p>
             </div>
-
-            <div class="skill-category">
-                <h3><i class="fas fa-briefcase"></i> Professional</h3>
-                <div class="skill-grid">
-                    <div class="skill-item highlight-border">
-                        <i class="fas fa-headset"></i>
-                        <span>SDR / Vendas</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-github"></i>
-                        <span>Git / GitHub</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-comments"></i>
-                        <span>Comunicação</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-terminal"></i>
-                        <span>VS Code</span>
-                    </div>
+            <div class="category-card" data-category="institucional">
+                <div class="category-icon">
+                    <i class="fas fa-building"></i>
                 </div>
+                <h3>Sites Institucionais</h3>
+                <p>Presença profissional</p>
             </div>
-
+            <div class="category-card" data-category="ecommerce">
+                <div class="category-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>E-commerce</h3>
+                <p>Lojas online</p>
+            </div>
+            <div class="category-card" data-category="sistema">
+                <div class="category-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Sistemas Web</h3>
+                <p>Sob medida</p>
+            </div>
+            <div class="category-card" data-category="redesign">
+                <div class="category-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Redesign</h3>
+                <p>Modernização</p>
+            </div>
+            <div class="category-card" data-category="manutencao">
+                <div class="category-icon">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <h3>Manutenção</h3>
+                <p>Suporte contínuo</p>
+            </div>
         </div>
     </section>
 
-    <section id="services" class="services-section">
-        <h2 class="section-title">Soluções de <span class="highlight">Impacto</span></h2>
+    <!-- OFERTAS / PROMOÇÕES -->
+    <section id="offers" class="offers-section">
+        <h2 class="section-title">Promoções <span class="highlight">Especiais</span></h2>
+        <p class="section-subtitle">Aproveite! Condições exclusivas por tempo limitado</p>
         
-        <div class="pricing-grid">
-            
-            <div class="pricing-card">
-                <h3>Landing Page</h3>
-                <div class="price">A parir de R$700,00 <span class="value">High</span></div>
-                <p class="scarcity">Ideal para capturar leads e vendas rápidas.</p>
-                <ul class="features">
-                    <li><i class="fas fa-check"></i> Design High Tech/Moderno</li>
-                    <li><i class="fas fa-check"></i> Foco em Conversão (SDR)</li>
-                    <li><i class="fas fa-check"></i> Botão WhatsApp Integrado</li>
-                    <li><i class="fas fa-check"></i> Hospedagem Gratuita</li>
-                </ul>
-                <a href="https://wa.me/5527999933283?text=Quero+uma+Landing+Page" target="_blank" class="btn-outline">Quero Este</a>
+        <div class="countdown-container">
+            <div class="countdown-item">
+                <span id="hours">12</span>
+                <p>Horas</p>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes">45</span>
+                <p>Minutos</p>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds">30</span>
+                <p>Segundos</p>
+            </div>
+        </div>
+        
+        <div class="offers-grid">
+            <div class="product-card offer-card fade-in" data-id="1" data-name="Landing Page Completa" data-price="697.00" data-image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=300&fit=crop">
+                <div class="product-badge">-30%</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=300&fit=crop" alt="Landing Page">
+                </div>
+                <div class="product-info">
+                    <h3>Landing Page Completa</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(48)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">R$ 997,00</span>
+                        <span class="current-price">R$ 697,00</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart(1, 'Landing Page Completa', 697.00, 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=300&fit=crop')">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
             </div>
 
-            <div class="pricing-card featured">
-                <div class="badge">MAIS VENDIDO</div>
-                <h3>Site Institucional</h3>
-                <div class="price">A partir de 800R$ <span class="value">Pro</span></div>
-                <p class="scarcity">Para empresas que querem autoridade total.</p>
-                <ul class="features">
-                    <li><i class="fas fa-check"></i> Até 5 Páginas</li>
-                    <li><i class="fas fa-check"></i> Otimizado para Google (SEO)</li>
-                    <li><i class="fas fa-check"></i> Painel Administrativo</li>
-                    <li><i class="fas fa-check"></i> 1 Ano de Suporte</li>
-                    <li><i class="fas fa-check"></i> <strong>Copywriting de Vendas</strong></li>
-                </ul>
-                <a href="https://wa.me/5527999933283?text=Quero+um+Site+Institucional" target="_blank" class="btn-neon">Contratar Agora</a>
+            <div class="product-card offer-card fade-in" data-id="2" data-name="Site Institucional Pro" data-price="1497.00" data-image="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=300&h=300&fit=crop">
+                <div class="product-badge">-25%</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=300&h=300&fit=crop" alt="Site Institucional">
+                </div>
+                <div class="product-info">
+                    <h3>Site Institucional Pro</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(32)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">R$ 1.997,00</span>
+                        <span class="current-price">R$ 1.497,00</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart(2, 'Site Institucional Pro', 1497.00, 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=300&h=300&fit=crop')">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
             </div>
 
-            <div class="pricing-card">
-                <h3>Sistema Web</h3>
-                <div class="price"><span class="value">Sob Medida</span></div>
-                <p class="scarcity">Sistemas complexos e automações.</p>
-                <ul class="features">
-                    <li><i class="fas fa-check"></i> Painel de Controle (Dashboard)</li>
-                    <li><i class="fas fa-check"></i> Banco de Dados (MariaDB)</li>
-                    <li><i class="fas fa-check"></i> API & Integrações</li>
-                    <li><i class="fas fa-check"></i> Login de Usuários</li>
-                </ul>
-                <a href="https://wa.me/5527999933283?text=Quero+um+Sistema+Personalizado" target="_blank" class="btn-outline">Consultar</a>
+            <div class="product-card offer-card fade-in" data-id="3" data-name="E-commerce Starter" data-price="2497.00" data-image="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=300&fit=crop">
+                <div class="product-badge">-20%</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=300&fit=crop" alt="E-commerce">
+                </div>
+                <div class="product-info">
+                    <h3>E-commerce Starter</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(27)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">R$ 2.997,00</span>
+                        <span class="current-price">R$ 2.497,00</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart(3, 'E-commerce Starter', 2497.00, 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=300&fit=crop')">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS / PACOTES -->
+    <section id="products" class="products-section">
+        <h2 class="section-title">Nossos <span class="highlight">Pacotes</span></h2>
+        
+        <div class="filters-container">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="landing">Landing Pages</button>
+            <button class="filter-btn" data-filter="institucional">Institucionais</button>
+            <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+            <button class="filter-btn" data-filter="sistema">Sistemas</button>
+        </div>
+        
+        <div class="products-grid" id="productsGrid">
+            <!-- Serviço 1 - Landing Page Basic -->
+            <div class="product-card fade-in" data-category="landing">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=300&fit=crop" alt="Landing Page Basic">
+                </div>
+                <div class="product-info">
+                    <h3>Landing Page Basic</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(35)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">R$ 497,00</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart(4, 'Landing Page Basic', 497.00, 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=300&fit=crop')">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
             </div>
 
+            <!-- Serviço 2 - Site Institucional -->
+            <div class="product-card fade-in" data-category="institucional">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=300&h=300&fit=crop" alt="Site Institucional">
+                </div>
+                <div class="product-info">
+                    <h3>Site Institucional Completo</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(28)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">R$ 1.997,00</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart(5, 'Site Institucional Completo', 1997.00, 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=300&h=300&fit=crop')">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Serviço 3 - E-commerce Completo -->
+            <div class="product-card fade-in" data-category="ecommerce">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=300&fit=crop" alt="E-commerce Completo">
+                </div>
+                <div class="product-info">
+                    <h3>E-commerce Completo</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(42)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">R$ 3.997,00</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart(6, 'E-commerce Completo', 3997.00, 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=300&fit=crop')">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Serviço 4 - Sistema Web -->
+            <div class="product-card fade-in" data-category="sistema">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=300&h=300&fit=crop" alt="Sistema Web">
+                </div>
+                <div class="product-info">
+                    <h3>Sistema Web Personalizado</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(18)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">A partir de R$ 4.997,00</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart(7, 'Sistema Web Personalizado', 4997.00, 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=300&h=300&fit=crop')">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Serviço 5 - Landing Page Premium -->
+            <div class="product-card fade-in" data-category="landing">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=300&fit=crop" alt="Landing Page Premium">
+                </div>
+                <div class="product-info">
+                    <h3>Landing Page Premium</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(52)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">R$ 997,00</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart(8, 'Landing Page Premium', 997.00, 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=300&fit=crop')">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Serviço 6 - Manutenção Mensal -->
+            <div class="product-card fade-in" data-category="institucional">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300&h=300&fit=crop" alt="Manutenção Mensal">
+                </div>
+                <div class="product-info">
+                    <h3>Manutenção Mensal</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(67)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">R$ 197,00/mês</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart(9, 'Manutenção Mensal', 197.00, 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300&h=300&fit=crop')">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- SEÇÃO DE DEPOIMENTOS -->
     <section id="testimonials" class="testimonials-section">
-        <h2 class="section-title">O que dizem os <span class="highlight">Clientes</span></h2>
+        <h2 class="section-title">O que dizem nossos <span class="highlight">Clientes</span></h2>
         
         <div class="testimonials-container">
             <div class="testimonial-card fade-in">
@@ -267,7 +476,7 @@
                     </div>
                 </div>
                 <p class="testimonial-text">
-                    "Excelente profissional, atendimento 5 estrelas com certeza. Recomendo."
+                    "Excelente profissional! Minha landing page ficou incrível e já está gerando leads qualificados para meu escritório."
                 </p>
                 <div class="stars">
                     <i class="fas fa-star"></i>
@@ -289,7 +498,7 @@
                     </div>
                 </div>
                 <p class="testimonial-text">
-                    "Ótimo profissional. Responsável, pontual e talentoso."
+                    "Ótimo profissional. Responsável, pontual e talentoso. Meu site institucional superou todas as expectativas!"
                 </p>
                 <div class="stars">
                     <i class="fas fa-star"></i>
@@ -300,64 +509,52 @@
                 </div>
             </div>
 
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-header">
+                    <div class="client-avatar">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="client-info">
+                        <h4>Maria Santos</h4>
+                        <span>Empresária</span>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    "Meu e-commerce ficou perfeito! Design moderno, fácil de usar e já estou vendendo muito mais. Recomendo!"
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="projects" class="projects-section">
-        <h2 class="section-title">Meus ultimos <span class="highlight">Projetos</span></h2>
-        
-        <div class="projects-grid">
-            
-            <a href="https://eslisilvaadvocacia.com.br" target="_blank" class="card">
-                <div class="card-img-wrapper">
-                    <img src="imagem/esli.jpg" alt="Site Dr. Esli Silva">
-                </div>
-                <div class="card-body">
-                    <h3>Dr. Esli Silva</h3>
-                    <p>Landing page para escritório de advocacia com foco em conversão e credibilidade.</p>
-                    <div class="tech-tags">
-                        <span>Landing Page</span><span>Design</span><span>SEO</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://gladstonfreire.com.br" target="_blank" class="card">
-                <div class="card-img-wrapper">
-                    <img src="imagem/print-pr-gladston.jpg" alt="Site Pr. Gladston">
-                </div>
-                <div class="card-body">
-                    <h3>Pr. Gladston Freire</h3>
-                    <p>Website institucional para autor e palestrante, com blog e agenda.</p>
-                    <div class="tech-tags">
-                        <span>Front-end</span><span>Design</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://gessodecoracompany.com.br" target="_blank" class="card">
-                <div class="card-img-wrapper">
-                    <img src="imagem/print-em-eliel.jpg" alt="Advogado Eliel">
-                </div>
-                <div class="card-body">
-                    <h3>Acabamento de Alto Padrão</h3>
-                    <p>Landing page de ranking, SEO, rápido e cod puro. </p>
-                    <div class="tech-tags">
-                        <span>Landing Page</span><span>SEO</span>
-                    </div>
-                </div>
-            </a>
-
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+        <div class="newsletter-content fade-in">
+            <h2>Receba <span class="highlight">Dicas Exclusivas</span></h2>
+            <p>Cadastre-se e receba conteúdos sobre como melhorar sua presença digital!</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Digite seu e-mail" required>
+                <button type="submit" class="btn-neon">
+                    <i class="fas fa-paper-plane"></i> Cadastrar
+                </button>
+            </form>
         </div>
     </section>
 
     <!-- CTA FINAL -->
     <section class="cta-section">
         <div class="cta-content fade-in">
-            <h2>Pronto para <span class="highlight">Transformar</span> seu Negócio?</h2>
-            <p>Vamos criar juntos um site que gera resultados reais para você.</p>
+            <h2>Pronto para ter seu <span class="highlight">Site Profissional?</span></h2>
+            <p>Vamos conversar sobre o seu projeto. Atendimento personalizado pelo WhatsApp.</p>
             <div class="cta-buttons">
-                <a href="https://wa.me/5527999933283?text=Olá+Diego!+Quero+fazer+um+orçamento+para+meu+projeto." target="_blank" class="btn-neon btn-large">
-                    <i class="fab fa-whatsapp"></i> Falar Agora no WhatsApp
+                <a href="https://wa.me/5527999933283?text=Olá+Diego!+Quero+um+orçamento+para+meu+projeto." target="_blank" class="btn-neon btn-large">
+                    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
                 </a>
             </div>
             <p class="cta-note"><i class="fas fa-bolt"></i> Resposta em até 2 horas</p>
@@ -366,20 +563,50 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">DIEGO<span class="highlight">DEV</span>_</div>
-            <div class="footer-links">
-                <a href="https://github.com/Dieguin77" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/diego-batista-gomes-moraes-737491259/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://wa.me/5527999933283" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <div class="footer-section">
+                <div class="footer-logo">DIEGO<span class="highlight">DEV</span>_</div>
+                <p>Criação de sites profissionais que geram resultados.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Dieguin77" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/diegobatistt" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/5527999933283" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
-            <p>Desenvolvido por <strong>Diego Batista G. Moraes</strong> - YHWH © 2026</p>
+            <div class="footer-section">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="servicos.html">Landing Pages</a></li>
+                    <li><a href="servicos.html">Sites Institucionais</a></li>
+                    <li><a href="servicos.html">E-commerce</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Formas de Pagamento</h4>
+                <div class="payment-icons">
+                    <i class="fab fa-pix"></i>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fas fa-barcode"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>DiegoDev © 2026 - Desenvolvido por Diego Batista G. Moraes</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <a href="https://wa.me/5527999933283?text=Olá+Diego,+vi+seu+site+e+quero+um+orçamento." class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5527999933283?text=Olá+Diego!+Vi+seus+serviços+e+quero+um+orçamento." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">Fale comigo!</span>
+        <span class="whatsapp-tooltip">Solicite um orçamento!</span>
     </a>
 </body>
 </html>
