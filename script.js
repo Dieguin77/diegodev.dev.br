@@ -390,7 +390,9 @@ function initNewsletter() {
             const email = form.querySelector('input').value;
             
             if(email) {
-                showNotification('Cadastrado com sucesso! Cupom enviado para seu e-mail.');
+                const message = `Olá Diego! 👋\n\nQuero receber dicas exclusivas sobre presença digital.\n\n📧 Meu e-mail: ${email}`;
+                const whatsappUrl = `https://wa.me/5527999933283?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
                 form.reset();
             }
         });
